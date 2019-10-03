@@ -1,8 +1,4 @@
-const express = require('express');
-const app = express();
+const app = require('./app.js');
 
-const index = require('./routes/index.js');
-
-app.get('/', index);
-
-app.listen(3000, () => console.log(`Open http://localhost:3000 to see a response.`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log('Open http://localhost:3000 to see a response.'));
